@@ -1,0 +1,24 @@
+1. Please create a database with name:
+
+EmployeesDB
+
+2. Then execute the following SQL Queries one by one:
+
+CREATE TABLE `EmployeesDB`.`Employee` (`EmployeeID` int NOT NULL,`FirstName` varchar(255),`LastName` varchar(255),`UserName` varchar(255),`Password` varchar(255),`IsManager` boolean,`LeaveBalance` int, PRIMARY KEY (EmployeeID));
+
+
+INSERT INTO `EmployeesDB`.`Employee` (`EmployeeID`, `FirstName`, `LastName`, `UserName`, `Password`, `IsManager`, `LeaveBalance`) VALUES (1, 'Queen', 'X', 'Admin', '123', 1, 30);
+
+
+
+CREATE TABLE `Employees_Vacations` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `author` int NOT NULL,
+  `status` varchar(255) NOT NULL,
+  `resolved_by` int NOT NULL,
+  `request_created_at` datetime DEFAULT NULL,
+  `vacation_start_date` datetime DEFAULT NULL,
+  `vacation_end_date` datetime DEFAULT NULL,
+  `request_created_by` int NOT NULL,
+  PRIMARY KEY (`id`)
+)
